@@ -62,7 +62,7 @@ Which are then used to warp-rectify the image.
 Script [rectify_bundle.py](https://github.com/IncrediBlame/lpr_demo/blob/master/rectify_bundle.py) is used to rectify images from a directory and provided as a usage example. Script [rectify_one.py](https://github.com/IncrediBlame/lpr_demo/blob/master/rectify_one.py) takes one image and one mask with possibly multiple License Plates and slices it into crops. Then it calls [get_corners.py](https://github.com/IncrediBlame/lpr_demo/blob/master/get_corners.py) on each of them. The latter two could be applied to your use-case.
 
 
-### 💡 Helper scripts <a name="helper"></a>
+### 📦 Helper scripts <a name="helper"></a>
 
 #### 1. Annotation converters <a name="convert_annotation"></a>
 
@@ -70,7 +70,7 @@ Script [helpers/annotation2mask.py](https://github.com/IncrediBlame/lpr_demo/blo
 
 Script [helpers/coco2crop.py](https://github.com/IncrediBlame/lpr_demo/blob/master/helpers/coco2crop.py) converts CoCo annotations into crops of individual License Plates.
 
-Script [helpers/coco2crop.py](https://github.com/IncrediBlame/lpr_demo/blob/master/helpers/coco2crop.py) converts CoCo annotations into crops of individual License Plates.
+Script [helpers/coco2mask.py](https://github.com/IncrediBlame/lpr_demo/blob/master/helpers/coco2mask.py) converts CoCo annotations into masks.
 
 Script [helpers/mask2crop.py](https://github.com/IncrediBlame/lpr_demo/blob/master/helpers/mask2crop.py) converts masks into crops of individual License Plates.
 
