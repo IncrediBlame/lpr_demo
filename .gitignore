@@ -1,0 +1,8 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# VSCode config files
+.vscode/
+
+# Warped LP files
+warped_digits/
