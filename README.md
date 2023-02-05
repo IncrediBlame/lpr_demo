@@ -1,4 +1,13 @@
-<div align="center">
+<style type="text/css">
+.centerImage
+{
+ text-align:center;
+ display:block;
+}
+</style>
+
+
+<div class="centerImage">
  
 **License plates segmentation and rectification project
 
@@ -39,31 +48,31 @@ Rectifying is achieved in several stages of filtering.
 
 Given the original image.
 
-<img src="https://github.com/IncrediBlame/lpr_demo/blob/master/pics/1.png" align="center" width="512" />
+<img src="https://github.com/IncrediBlame/lpr_demo/blob/master/pics/1.png" class="centerImage" width="512" />
 
 We threshold it several times.
 
-<img src="https://github.com/IncrediBlame/lpr_demo/blob/master/pics/2.png" align="center" width="256" />
+<img src="https://github.com/IncrediBlame/lpr_demo/blob/master/pics/2.png" class="centerImage" width="256" />
 
 Then separate the main component to remove noise.
 
-<img src="https://github.com/IncrediBlame/lpr_demo/blob/master/pics/3.png" align="center" width="256" />
+<img src="https://github.com/IncrediBlame/lpr_demo/blob/master/pics/3.png" class="centerImage" width="256" />
 
 Then separate digits (optional).
 
-<img src="https://github.com/IncrediBlame/lpr_demo/blob/master/pics/4.png" align="center" width="256" />
+<img src="https://github.com/IncrediBlame/lpr_demo/blob/master/pics/4.png" class="centerImage" width="256" />
 
 To determine their directions (optional).
 
-<img src="https://github.com/IncrediBlame/lpr_demo/blob/master/pics/5.png" align="center" width="256" />
+<img src="https://github.com/IncrediBlame/lpr_demo/blob/master/pics/5.png" class="centerImage" width="256" />
 
 Directions are used to split top/bottom/left/right sides of the mask.
 
-<img src="https://github.com/IncrediBlame/lpr_demo/blob/master/pics/6.png" align="center" width="256" />
+<img src="https://github.com/IncrediBlame/lpr_demo/blob/master/pics/6.png" class="centerImage" width="256" />
 
 Which are then used to warp-rectify the image.
 
-<img src="https://github.com/IncrediBlame/lpr_demo/blob/master/pics/7.png" align="center" width="256" />
+<img src="https://github.com/IncrediBlame/lpr_demo/blob/master/pics/7.png" class="centerImage" width="256" />
 
 
 Script [rectify_bundle.py](https://github.com/IncrediBlame/lpr_demo/blob/master/rectify_bundle.py) is used to rectify images from a directory and provided as a usage example. Script [rectify_one.py](https://github.com/IncrediBlame/lpr_demo/blob/master/rectify_one.py) takes one image and one mask with possibly multiple License Plates and slices it into crops. Then it calls [get_corners.py](https://github.com/IncrediBlame/lpr_demo/blob/master/get_corners.py) on each of them. The latter two could be applied to your use-case.
