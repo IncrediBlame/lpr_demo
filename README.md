@@ -38,25 +38,32 @@ The latter one uses the same images but applies a custom augmentation to them: i
 Rectifying is achieved in several stages of filtering.
 
 Given the original image.
-![Original image](https://github.com/IncrediBlame/lpr_demo/blob/master/pics/1.png)
+
+<img src="https://github.com/IncrediBlame/lpr_demo/blob/master/pics/1.png" align="center" width="512" />
 
 We threshold it several times.
-![Thresholded image](https://github.com/IncrediBlame/lpr_demo/blob/master/pics/2.png)
+
+<img src="https://github.com/IncrediBlame/lpr_demo/blob/master/pics/2.png" align="center" width="256" />
 
 Then separate the main component to remove noise.
-![Main component](https://github.com/IncrediBlame/lpr_demo/blob/master/pics/3.png)
+
+<img src="https://github.com/IncrediBlame/lpr_demo/blob/master/pics/3.png" align="center" width="256" />
 
 Then separate digits (optional).
-![Digits](https://github.com/IncrediBlame/lpr_demo/blob/master/pics/4.png)
+
+<img src="https://github.com/IncrediBlame/lpr_demo/blob/master/pics/4.png" align="center" width="256" />
 
 To determine their directions (optional).
-![Digits' directions](https://github.com/IncrediBlame/lpr_demo/blob/master/pics/5.png)
+
+<img src="https://github.com/IncrediBlame/lpr_demo/blob/master/pics/5.png" align="center" width="256" />
 
 Directions are used to split top/bottom/left/right sides of the mask.
-![Sides marked](https://github.com/IncrediBlame/lpr_demo/blob/master/pics/6.png)
+
+<img src="https://github.com/IncrediBlame/lpr_demo/blob/master/pics/6.png" align="center" width="256" />
 
 Which are then used to warp-rectify the image.
-![Rectified image](https://github.com/IncrediBlame/lpr_demo/blob/master/pics/7.png)
+
+<img src="https://github.com/IncrediBlame/lpr_demo/blob/master/pics/7.png" align="center" width="256" />
 
 
 Script [rectify_bundle.py](https://github.com/IncrediBlame/lpr_demo/blob/master/rectify_bundle.py) is used to rectify images from a directory and provided as a usage example. Script [rectify_one.py](https://github.com/IncrediBlame/lpr_demo/blob/master/rectify_one.py) takes one image and one mask with possibly multiple License Plates and slices it into crops. Then it calls [get_corners.py](https://github.com/IncrediBlame/lpr_demo/blob/master/get_corners.py) on each of them. The latter two could be applied to your use-case.
