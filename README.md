@@ -1,6 +1,6 @@
-<div>
+<div align="center">
  
-**License plates segmentation and rectification project
+**License plates segmentation and rectification project**
 
 </div>
 
