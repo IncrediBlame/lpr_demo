@@ -4,7 +4,7 @@ from rectify_one import *
 
 
 # Read unique filenames with extensions without mask, plate, frame, etc
-path = "./plates/plates3/"
+path = "./plates/plates1/"
 res_path = "./warped_digits/"
 unique_files = list_files(path)
 

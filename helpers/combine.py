@@ -9,8 +9,8 @@ files_only = [f for f in listdir(path) if isfile(join(path, f))]
 unique_files = files_only
 unique_files = set()
 for file in files_only:
-    # Get rid of moronic ".DS.DS_Store"
-    if file == "combined.png":
+    # Get rid of moronic ".DS.DS_Store" and similar files
+    if file == "combined.png" or file == "combined_originals.png":
         continue
     if file.split('.')[0] == "":
         continue
@@ -30,6 +30,7 @@ for file in unique_files:
     print(file)
 
     img = cv2.imread(path + file)
+    img = cv2.resize(img, (warp_shape[0], warp_shape[1]))
     x = count % img_per_width
     y = count // img_per_width
     combined[y * warp_shape[1]: (y + 1) * warp_shape[1], x * warp_shape[0]: (x + 1) * warp_shape[0]] = img

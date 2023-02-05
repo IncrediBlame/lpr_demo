@@ -8,7 +8,7 @@ def rectify_one(img: np.ndarray, mask: np.ndarray, warp_shape: np.ndarray=np.arr
     slices = slice_imgs(img, mask)
     warped_list = []
     for img_slice, mask_slice, origin, scaling_factor in slices:
-        corners = get_corners(img_slice, mask_slice)
+        corners = get_corners(img_slice, mask_slice, use_digits=True)
 
         # Convert to original image coordinates
         corners /= scaling_factor
